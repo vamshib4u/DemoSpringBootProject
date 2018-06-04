@@ -14,10 +14,11 @@ public class PersonService {
 	
 	public PersonService() {
 		Person p1 = new Person(1, "Vamshidhar", "Kurapati", 30);
-		Person p2 = new Person(2, "Manasa", "Manasa", 26);
+		Person p2 = new Person(2, "Manasa", "Nunna", 26);
 		Person p3 = new Person(3, "Aaryahi", "Kurapati", 1);
 		persons.put("1", p1);
 		persons.put("2", p2);
+		persons.put("3", p3);
 	}
 	
 	public Person getPerson(String id) {
