@@ -20,13 +20,13 @@ public class DbSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        ProductPrice current_price = new ProductPrice();
-        current_price.setId("13860428");
-        current_price.setCurrency_code("USD");
-        current_price.setValue("10.00");
-
-        this.priceRepository.deleteAll();
-        List<ProductPrice> current_prices = Arrays.asList(current_price);
-        this.priceRepository.save(current_price);
+//        ProductPrice current_price = new ProductPrice();
+//        current_price.setId("13860428");
+//        current_price.setCurrency_code("USD");
+//        current_price.setValue("10.00");
+//
+//        this.priceRepository.deleteAll();
+//        List<ProductPrice> current_prices = Arrays.asList(current_price);
+//        this.priceRepository.save(current_price);
     }
 }
