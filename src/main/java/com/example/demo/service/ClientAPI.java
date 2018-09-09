@@ -18,12 +18,7 @@ public class ClientAPI {
 			ResponseEntity<ProductApi> result = restTemplate.getForEntity(responseUrl, ProductApi.class);
 			productApi = result.getBody();
 			statusObject.setSuccess(true);
-//			productApi.setStatusObject(statusObject);
-//			System.out.println(result.toString());
 		  } catch (Exception e) {
-//			statusObject.setSuccess(false);
-//			statusObject.setErrorMessage(e.getMessage());
-//			productApi.setStatusObject(statusObject);
 			  //TO-DO
 		  }
 		return productApi;
