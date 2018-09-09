@@ -3,6 +3,8 @@
  */
 package com.example.demo.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +21,13 @@ public class ProductService {
 	@Autowired
 	ProductPriceRepository repo;
 	
-	public ProductPrice getProductDetailsById(String id) {
+	public Optional<ProductPrice> getProductDetailsById(String id) {
 		
-		return repo.findOne("13860428");
+		return repo.findById(id);
+	}
+	
+	public ProductPrice updatePrice(ProductPrice price) {
+		return repo.save(price);
 	}
 
 }
