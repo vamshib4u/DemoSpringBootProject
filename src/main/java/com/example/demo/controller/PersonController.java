@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Person;
+import com.example.demo.service.ExcuteCommand;
 import com.example.demo.service.PersonService;
 
 
@@ -20,6 +21,8 @@ public class PersonController {
 	
 	@Autowired
 	PersonService ps;
+	@Autowired
+	ExcuteCommand excuteCmd;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public Hashtable<String, Person> getAll() {
@@ -45,5 +48,10 @@ public class PersonController {
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public boolean udpatePerson(@RequestBody Person person) {
 		return ps.updatePerson(person);
+	}
+	
+	@RequestMapping(method = RequestMethod.POST)
+	public void excuteCmd() {
+		excuteCmd.excuteCmdScript();
 	}
 }
